@@ -1,0 +1,50 @@
+services:
+  mysql-spring-mvc-2:
+    image: mysql:8.3.0
+    container_name: mysql-spring-mvc-2
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    networks:
+      - spring-mvc
+    volumes:
+      - spring_mysql_data:/var/lib/mysql
+
+
+  phpmyadmin-spring-mvc-2:
+    container_name: phpmyadmin-springmvc2
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - "8085:80"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: mysql-spring-mvc-2
+      PMA_USER: root
+      PMA_PASSWORD: password
+    depends_on:
+      - mysql-spring-mvc-2
+    restart: unless-stopped
+
+  keycloak:
+    container_name: keycloak
+    image: quay.io/keycloak/keycloak:25.0.1
+    ports:
+      - "8181:8080"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    networks:
+      - spring-mvc
+    command:
+      - "start-dev"
+
+networks:
+  spring-mvc:
+    driver: bridge
+
+volumes:
+  spring_mysql_data:
+    driver: local
+  keycloak:
+    driver: local
