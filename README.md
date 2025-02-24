@@ -20,6 +20,9 @@ Configurons la securité
 
 ![a05](https://github.com/user-attachments/assets/034f37b0-9174-433e-8e55-9e8a8ebd7561)
 
+![a09](https://github.com/user-attachments/assets/12139355-3616-4361-ad48-ded2b73328c9)
+
+
 Mettons en place des pages HTML avec thymeleaf
 
 ![a06](https://github.com/user-attachments/assets/74341a95-1e97-49ec-af90-20514fc7a309)
@@ -27,6 +30,21 @@ Mettons en place des pages HTML avec thymeleaf
 Dockerisons
 
 ![a07](https://github.com/user-attachments/assets/267331d0-151d-4381-b14b-3047c699fb03)
+
+![a08](https://github.com/user-attachments/assets/9040470d-f61f-4800-a1f4-b8ba782630b9)
+
+
+![a10](https://github.com/user-attachments/assets/fa79d057-c775-487b-8c90-c2893b687025)
+
+Ci apres la connexion avec utilisateur deja inscrit sur keycloack
+
+![a11](https://github.com/user-attachments/assets/87496c86-b719-420f-8493-c05e28281a04)
+
+![a12](https://github.com/user-attachments/assets/6e7bd7e7-308b-4b49-9246-0a7738100b7f)
+
+
+
+
 
 
 
